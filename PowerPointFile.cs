@@ -4,11 +4,18 @@ using System.Text;
 
 namespace Classes
 {
-    class PowerPointFile : File
+    class PowerPointFile : IFile
     {
+        public string FileName { get; set; }
+        public int Size { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public void Compress()
+        {
+            Console.WriteLine("Compressing PowerPointFile.");
+            throw new NotImplementedException();
+        }
         public void Present()
         {
-            DateTime dateMade = CreatedOn;
             Console.WriteLine($"{FileName} presenting.");
         }
     }
