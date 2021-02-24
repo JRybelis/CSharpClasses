@@ -1,4 +1,5 @@
 ﻿using System;
+using ClassLibrary1;
 
 namespace Classes
 {
@@ -16,6 +17,19 @@ namespace Classes
             Wallace.greeting();
 
             Console.WriteLine($"Object of Person type count: {Person.Count}");
+
+            ExcelFile excelFile = new ExcelFile();
+            excelFile.CreatedOn = DateTime.Now;
+            excelFile.FileName = "excel-file";
+            excelFile.GenerateReport();
+
+            WordFile wordFile = new WordFile();
+            wordFile.CreatedOn = DateTime.Now;
+            wordFile.FileName = "word-file";
+            wordFile.Print();
+
+            Class1 test = new Class1();
+            
         }
     }
 }
