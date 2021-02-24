@@ -30,7 +30,16 @@ namespace Classes
 
             Class1 test = new Class1();
 
-            
+            Shape[] shapes =
+            {
+                new Circle(),
+                new Rectangle(),
+                new Triangle(),
+            };
+            foreach (Shape shape in shapes)
+            {
+                shape.Draw();
+            }
             
         }
     }
